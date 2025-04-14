@@ -10,6 +10,9 @@ window.addEventListener("load", function() {
     console.log("Auto play is set to " + video.autoplay);
     console.log("Loop is set to " + video.loop);
 
+	// Initialize volume display
+    updateVolumeInfo();
+
 	// Play Button
     document.querySelector("#play").addEventListener("click", function() {
         video.play();
@@ -76,9 +79,6 @@ window.addEventListener("load", function() {
     function updateVolumeInfo() {
         document.getElementById("volume").textContent = Math.round(video.volume * 100) + "%";
     }
-    
-    // Initialize volume display
-    updateVolumeInfo();
 });
 
 
