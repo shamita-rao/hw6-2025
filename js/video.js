@@ -10,13 +10,12 @@ window.addEventListener("load", function() {
     console.log("Auto play is set to " + video.autoplay);
     console.log("Loop is set to " + video.loop);
 
-	// Initialize volume display
-    updateVolumeInfo();
 
 	// Play Button
     document.querySelector("#play").addEventListener("click", function() {
         video.play();
-        updateVolumeInfo();
+		document.getElementById("volume").textContent = "";
+		updateVolumeInfo();
         console.log("Play Video");
     });
 
